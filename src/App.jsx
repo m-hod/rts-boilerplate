@@ -1,11 +1,12 @@
 import React from 'react'
 import { hot } from 'react-hot-loader'
 
-import './app.css'
+import './styles/main'
+
 
 const App = () => {
     return (
-        <div className='app'>
+        <div>
             Welcome to the react-typescript-sass boilerplate
         </div>
     )

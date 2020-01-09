@@ -13,12 +13,17 @@ module.exports = {
                 options: { presets: ['@babel/env'] }
             },
             {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                test: /\.(s*)css$/,
+                use: ['style-loader', 'css-loader', 'sass-loader']
             }
+            // {
+            //     test: /\.css$/,
+            //     use: ['style-loader', 'css-loader']
+            // },
+            
         ]
     },
-    resolve: { extensions: ['*', '.js', '.jsx'] },
+    resolve: { extensions: ['*', '.js', '.jsx', '.scss'] },
     output: {
         path: path.resolve(__dirname, 'dist/'),
         publicPath: '/dist/',
@@ -30,5 +35,7 @@ module.exports = {
         publicPath: 'http://localhost:3000/dist/',
         hotOnly: true
     },
-    plugins: [new webpack.HotModuleReplacementPlugin()]
+    plugins: [
+        new webpack.HotModuleReplacementPlugin()
+    ]
 }
