@@ -2,28 +2,29 @@ const path = require('path')
 const webpack = require('webpack')
 
 module.exports = {
-    entry: './src/index.js',
+    entry: './src/index.ts',
     mode: 'development',
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                exclude: /(node_modules|bower_components)/,
-                loader: 'babel-loader',
-                options: { presets: ['@babel/env'] }
+                test: /\.ts(x?)$/,
+                exclude: /node_modules/,
+                use: 'ts-loader'
+            },
+            {
+                enforce: 'pre',
+                test: /\.js$/,
+                loader: 'source-map-loader'
             },
             {
                 test: /\.(s*)css$/,
                 use: ['style-loader', 'css-loader', 'sass-loader']
             }
-            // {
-            //     test: /\.css$/,
-            //     use: ['style-loader', 'css-loader']
-            // },
-            
         ]
     },
-    resolve: { extensions: ['*', '.js', '.jsx', '.scss'] },
+    resolve: { 
+        extensions: ['*', '.js', '.jsx', '.scss', '.ts', '.tsx'] 
+    },
     output: {
         path: path.resolve(__dirname, 'dist/'),
         publicPath: '/dist/',
@@ -37,5 +38,6 @@ module.exports = {
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin()
-    ]
+    ],
+    devtool: 'inline-source-map'
 }
