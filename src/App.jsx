@@ -1,11 +1,14 @@
 import React from 'react'
+import { hot } from 'react-hot-loader'
+
+import './app.css'
 
 const App = () => {
     return (
-        <div>
+        <div className='app'>
             Welcome to the react-typescript-sass boilerplate
         </div>
     )
 }
 
-export default App
+export default hot(module)(App)
