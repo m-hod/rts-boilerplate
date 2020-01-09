@@ -1,5 +1,5 @@
 {
-  "name": "react-typescript-sass-boilerplate",
+  "name": "rts-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m-hodges/react-typescript-sass-boilerplate.git"
+    "url": "git+https://github.com/m-hodges/rts-boilerplate.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/m-hodges/react-typescript-sass-boilerplate/issues"
+    "url": "https://github.com/m-hodges/rts-boilerplate/issues"
   },
-  "homepage": "https://github.com/m-hodges/react-typescript-sass-boilerplate#readme",
   "devDependencies": {
     "@babel/cli": "^7.7.7",
     "@babel/core": "^7.7.7",
