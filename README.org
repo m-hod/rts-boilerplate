@@ -22,3 +22,5 @@ Client-side code goes in src/.
 Create React components as .tsx files in src/components and import them into App.tsx to be compiled.
 
 Create SASS stylesheets as .scss files in src/styles and subfolders and import them into main.scss to be compiled.
+
+Serves on localhost:3000
