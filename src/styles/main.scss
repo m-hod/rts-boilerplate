@@ -9,15 +9,10 @@
 
 // reset, typography, base styles etc
 @import 'partials/reset';
-<<<<<<< HEAD
-@import 'partials/typograhy';
-@import 'partials/containers';
-=======
 @import 'partials/typography';
->>>>>>> 504279ef4350f7531c8b5dbc7abdacd2bebdf8e9
+@import 'partials/containers';
 
 // partials used between components
-@import 'partials/grids';
 @import 'partials/containers';
 
 // highly specific components
