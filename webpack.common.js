@@ -1,20 +1,19 @@
 const path = require('path')
+const { HotModuleReplacementPlugin } = require('webpack')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
     entry: {
         app: './src/index.tsx'
     },
     plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            title: 'Production'
-        })
+        new HotModuleReplacementPlugin(),
+        new CleanWebpackPlugin()
     ],
     output: {
         filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'dist/')
+        // publicPath: '/dist/'
     },
     module: {
         rules: [
