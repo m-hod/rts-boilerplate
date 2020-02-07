@@ -11,7 +11,7 @@ router.get('/hi', (req, res) => {
 })
 
 router.get('/', (req, res) => {
-    res.sendFile('index.html')
+    res.sendFile('./dist/index.html')
 })
 
 module.exports = router
