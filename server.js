@@ -9,4 +9,4 @@ server.use(express.static(__dirname))
 server.use(express.static(path.join(__dirname, 'public')))
 server.use('/', router)
 
-export default server
+module.exports = server
